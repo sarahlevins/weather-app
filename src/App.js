@@ -4,7 +4,7 @@ import CurrentWeather from './CurrentWeather';
 function App() {
   return (
     <div className="App">
-      <CurrentWeather />
+      <CurrentWeather city="London" temperature="13" goodtimes="awww yeah"/>
     </div>
   );
 }

@@ -1,10 +1,11 @@
 import React from 'react';
 
-const CurrentWeather = () => {
+const CurrentWeather = ({city, temperature, goodtimes, ...props}) => {
     return (
         <div>
-            <div>20</div>
-            <div>Stockholm</div>
+            <div>{temperature}</div>
+            <div>{city}</div>
+            <div>{goodtimes}</div>
         </div>
     );
 };
