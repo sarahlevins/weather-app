@@ -5,7 +5,6 @@ const CurrentWeather = (props) => {
         <div>
             <div>{props.temperature}</div>
             <div>{props.city}</div>
-            <div>{props.goodtimes}</div>
         </div>
     );
 };
