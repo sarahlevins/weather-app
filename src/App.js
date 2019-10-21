@@ -1,11 +1,13 @@
 import React from 'react';
-import CurrentWeather from './CurrentWeather';
+import ComplaintPage from './components/pages/ComplaintPage';
+import WeatherPage from './components/pages/WeatherPage';
 
 function App() {
   return (
-    <div className="App">
-      <CurrentWeather city="London" temperature="13" />
-    </div>
+    <>
+      <WeatherPage />
+      <ComplaintPage />
+    </>
   );
 }
 
