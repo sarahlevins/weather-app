@@ -1,11 +1,14 @@
 import React from 'react';
 
-const DayOfWeek = () => {
-    return (
-    <div>
-        <p>Day of the week</p>
-    </div>
-    );
+class DayOfWeek extends React.Component {
+    render(){
+        const weekday = this.props.weekday
+        return (
+        <div>
+            <p>{weekday}</p>
+        </div>
+        )
+    }
 };
 
 export default DayOfWeek;

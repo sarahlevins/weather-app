@@ -1,13 +1,15 @@
 import React from 'react';
 
-import Header from '../atoms/Header';
+import BioHeader from '../atoms/BioHeader';
 import BioDescription from '../atoms/BioDescription';
 import BioPicture from '../atoms/BioPicture';
+import WeatherLink from '../atoms/WeatherLink';
 
 const Bio = () => {
     return (
     <div>
-        <Header />
+        <WeatherLink />
+        <BioHeader />
         <BioDescription />
         <BioPicture />
     </div>
