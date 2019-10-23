@@ -1,9 +1,9 @@
 import React from 'react';
 
-const WeatherIcon = () => {
+const WeatherIcon = ({icon, ...props}) => {
     return (
     <div>
-        <p>Weather Icon</p>
+        <p>{icon}</p>
     </div>
     );
 };

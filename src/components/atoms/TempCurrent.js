@@ -1,9 +1,9 @@
 import React from 'react';
 
-const TempCurrent = () => {
+const TempCurrent = ({temp, ...props}) => {
     return (
     <div>
-        <p>25 degrees</p>
+        <p>{temp}</p>
     </div>
     );
 };

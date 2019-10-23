@@ -1,10 +1,14 @@
 import React from 'react';
 import CurrentWeather from '../molecules/CurrentWeather';
 
-const PageTemplate = props => {
+const PageTemplate = ({city, cityimage, temp, ...props}) => {
   return (
     <div>
-      <CurrentWeather />
+      <CurrentWeather 
+      city = {city}
+      cityimage = {cityimage} 
+      temp = {temp}
+      />
       {props.children}
     </div>
   );

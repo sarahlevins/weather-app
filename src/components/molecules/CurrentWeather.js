@@ -4,12 +4,12 @@ import CityImage from '../atoms/CityImage';
 import TempCurrent from '../atoms/TempCurrent';
 import ChangeCityButton from '../atoms/ChangeCityButton';
 
-const CurrentWeather = () => {
+const CurrentWeather = ({city, cityimage, temp, ...props}) => {
     return (
     <div>
-        <CityImage />
-        <CityName />
-        <TempCurrent />
+        <CityImage cityimage={cityimage}/>
+        <CityName city={city} />
+        <TempCurrent temp={temp} />
         <ChangeCityButton />
     </div>
     );

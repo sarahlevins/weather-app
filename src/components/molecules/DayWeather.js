@@ -4,18 +4,15 @@ import WeatherIcon from '../atoms/WeatherIcon';
 import TempHigh from '../atoms/TempHigh';
 import TempLow from '../atoms/TempLow';
 
-class DayWeather extends React.Component {
-    render(){
-        const weekday = this.props.weekday
+const DayWeather = ({icon, ...props}) => {
     return (
-    <div>
-        <DayOfWeek weekday={weekday}/>
-        <WeatherIcon />
+        <div>
+        <DayOfWeek />
+        <WeatherIcon icon={icon}/>
         <TempHigh />
         <TempLow />
     </div>
     )
-    }
-};
+}
 
 export default DayWeather;

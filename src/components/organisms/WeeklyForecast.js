@@ -2,19 +2,18 @@ import React from 'react';
 import DayWeather from '../molecules/DayWeather';
 import HourlyWeather from'../molecules/HourlyWeather';
 
-const WeeklyForecast = () => {
+const WeeklyForecast = ({icon, ...props}) => {
     return (
     <div>
         <h2>Today:</h2>
-        <DayWeather weekday="Monday"/>
+        <DayWeather icon={icon} />
         <HourlyWeather />
         <h2>Upcoming:</h2>
-        <DayWeather weekday="Tuesday"/>
-        <DayWeather weekday="Wednesday"/>
-        <DayWeather weekday="Thursday"/>
-        <DayWeather weekday="Friday"/>
-        <DayWeather weekday="Saturday"/>
-        <DayWeather weekday="Sunday"/>
+        <DayWeather icon={icon} />
+        <DayWeather icon={icon} />
+        <DayWeather icon={icon} />
+        <DayWeather icon={icon} />
+        <DayWeather icon={icon} />
     </div>
     );
 };
