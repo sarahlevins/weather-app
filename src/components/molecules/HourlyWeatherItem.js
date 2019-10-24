@@ -1,14 +1,12 @@
 import React from 'react';
-import Hour from '../atoms/Hour';
 import TempCurrent from '../atoms/TempCurrent';
 import WeatherIcon from '../atoms/WeatherIcon';
 
-const HourlyWeatherItem = () => {
+const HourlyWeatherItem = ({icon, hour, ...props}) => {
     return (
     <div>
-        <Hour />
         <TempCurrent />
-        <WeatherIcon />
+        <WeatherIcon icon={icon} />
     </div>
     );
 };

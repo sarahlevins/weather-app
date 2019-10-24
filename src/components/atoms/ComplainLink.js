@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ComplainLink = () => {
+const ComplainLink = ({button, ...props}) => {
     return (
     <div>
-        <p>CLICK HERE TO COMPLAIN</p>
+        <button>CLICK HERE TO COMPLAIN</button>
     </div>
     );
 };

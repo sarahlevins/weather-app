@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ChangeCityButton = () => {
+const ChangeCityButton = (button, ...props) => {
     return (
     <div>
-        <p>CLICK TO CHANGE CITY</p>
+        <button>change city</button>
     </div>
     );
 };
