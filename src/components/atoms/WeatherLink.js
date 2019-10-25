@@ -3,7 +3,7 @@ import React from 'react';
 const WeatherLink = () => {
     return (
     <div>
-        <p>CLICK HERE TO GO BACK TO WEATHER</p>
+        <button>go back to weather</button>
     </div>
     );
 };

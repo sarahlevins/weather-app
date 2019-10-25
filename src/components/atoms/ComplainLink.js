@@ -3,7 +3,7 @@ import React from 'react';
 const ComplainLink = ({button, ...props}) => {
     return (
     <div>
-        <button>CLICK HERE TO COMPLAIN</button>
+        <button>complain</button>
     </div>
     );
 };

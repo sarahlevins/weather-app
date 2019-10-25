@@ -8,7 +8,6 @@ import WeatherLink from '../atoms/WeatherLink';
 const Bio = () => {
     return (
     <div>
-        <WeatherLink />
         <BioHeader />
         <BioDescription />
         <BioPicture />
