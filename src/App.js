@@ -1,13 +1,12 @@
 import React from 'react';
-import ComplaintPage from './pages/ComplaintPage';
-import WeatherPage from './pages/WeatherPage';
+import AppContainer from './containers/AppContainer';
+import {BrowserRouter as Router} from 'react-router-dom';
 
 function App() {
   return (
-    <>
-      <WeatherPage />
-      <ComplaintPage />
-    </>
+    <Router>
+      <AppContainer />
+    </Router>
   );
 }
 

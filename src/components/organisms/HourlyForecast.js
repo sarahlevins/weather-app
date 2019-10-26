@@ -15,7 +15,7 @@ const Forecast = () => {
     const time = chunkedArray[0].dt_txt;
     const temp = chunkedArray[0].main.temp;
     const icon = chunkedArray[0].weather[0].icon;
-
+    
     return(
         <div>
             <p>{time}</p>
@@ -25,4 +25,4 @@ const Forecast = () => {
     );
 }
 
-export default Forecast;
+export default HourlyForecast;

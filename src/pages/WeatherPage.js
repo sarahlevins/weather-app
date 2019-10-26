@@ -1,29 +1,26 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import WeeklyForecast from '../components/organisms/WeeklyForecast';
 import PageTemplate from '../components/templates/PageTemplate';
-import ComplainLink from'../components/atoms/ComplainLink';
-import {CURRENT_WEATHER, HOURLY_FORECAST, } from '../data/mockWeather';
+import Button from '../components/atoms/Button';
 import Forecast from '../components/organisms/Forecast';
 
-const WeatherPage = () => {
+const WeatherPage = ({city, temp, changeCity, forecast, ...props}) => {
   return (
-    <div>
       <PageTemplate 
-        city = {CURRENT_WEATHER.name} 
+        city = {city}
         cityimage = 'picture of city'
-        temp = {CURRENT_WEATHER.main.temp}
+        temp = {temp}
+        changeCity = {changeCity}
         >
-      <WeeklyForecast 
-        icon = {HOURLY_FORECAST.list[0].weather[0].icon} 
-        // temp = {}
-        // mintemp = {}
-        // maxtemp {}
-        // time = {}
-      />
-      <ComplainLink />
-      <Forecast />
+
+        <WeeklyForecast forecast = {forecast}/>
+        
+        <Link to="/complain">
+          <Button>go complain to weatherman</Button>
+        </Link>
+      
       </PageTemplate>
-    </div>
   );
 }
 

@@ -8,7 +8,6 @@ const WeeklyForecast = ({icon, ...props}) => {
     return (
     <div>
         <h2>Today:</h2>
-        <DayWeather  />
         <Forecast />
         <HourlyWeather icon={icon}/>
         <h2>Upcoming:</h2>

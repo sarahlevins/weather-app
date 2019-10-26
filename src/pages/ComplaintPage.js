@@ -1,28 +1,25 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import PageTemplate from '../components/templates/PageTemplate';
 import ComplaintForm from '../components/organisms/ComplaintForm';
-import WeatherLink from '../components/atoms/WeatherLink';
+import Button from '../components/atoms/Button';
 import Bio from '../components/molecules/Bio';
-import {CURRENT_WEATHER} from '../data/mockWeather';
 
-
-
-const ComplaintPage = () => {
+const ComplaintPage = ({city, temp, changeCity, ...props}) => {
   return (
-    
     <PageTemplate 
-    city = {CURRENT_WEATHER.name}
-    cityimage = 'picture of city' >
+      city = {city}
+      cityimage = 'picture of city'
+      temp = {temp}
+      changeCity = {changeCity}
+    >
+    
+      <Bio />
+      <ComplaintForm />
+      <Link to="/">
+          <Button>Go to weather</Button>
+      </Link>
 
-    <Bio />
-    <ComplaintForm />
-    
-    <WeatherLink 
-    // city = {}
-    // time = {}
-    // icon = {}
-    />
-    
     </PageTemplate>
   );
 

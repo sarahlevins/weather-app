@@ -4,13 +4,13 @@ import CityImage from '../atoms/CityImage';
 import TempCurrent from '../atoms/TempCurrent';
 import ChangeCityButton from '../atoms/ChangeCityButton';
 
-const CurrentWeather = ({city, cityimage, temp, ...props}) => {
+const CurrentWeather = ({city, cityimage, temp, changeCityLink, ...props}) => {
     return (
     <div>
         <CityImage cityimage={cityimage}/>
         <CityName city={city} />
         <TempCurrent temp={temp} />
-        <ChangeCityButton />
+        <button onClick={changeCityLink}>Change City</button>
     </div>
     );
 };
