@@ -1,7 +1,6 @@
 import React from 'react';
 import DayWeather from '../molecules/DayWeather';
 import HourlyWeather from'../molecules/HourlyWeather';
-import { HOURLY_FORECAST } from '../../data/mockWeather';
 import Forecast from '../organisms/Forecast';
 
 const WeeklyForecast = ({icon, ...props}) => {

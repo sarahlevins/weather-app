@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 import WeeklyForecast from '../components/organisms/WeeklyForecast';
 import PageTemplate from '../components/templates/PageTemplate';
 import Button from '../components/atoms/Button';
-import Forecast from '../components/organisms/Forecast';
 
 const WeatherPage = ({city, temp, changeCity, forecast, ...props}) => {
   return (

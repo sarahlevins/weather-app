@@ -1,5 +1,4 @@
 import React from 'react';
-import WeeklyForecast from './WeeklyForecast';
 import { HOURLY_FORECAST } from '../../data/mockWeather';
 
 
