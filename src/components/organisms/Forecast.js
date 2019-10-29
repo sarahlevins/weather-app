@@ -1,25 +1,35 @@
 import React from 'react';
-import { HOURLY_FORECAST } from '../../data/mockWeather';
+import DayWeather from'../molecules/DayWeather';
+import HourlyWeather from '../molecules/HourlyWeather';
 
+const Forecast = ({forecast, ...props}) => {
 
-const Forecast = () => {
-
-    const chunkedArray = [];
-    const hourlyForecastArray = HOURLY_FORECAST.list
-    for(let i = 0; i <= hourlyForecastArray.length; i++) {
-            chunkedArray.push(hourlyForecastArray[i]);
-        }
-    console.log(chunkedArray);
-    
-    const time = chunkedArray[0].dt_txt;
-    const temp = chunkedArray[0].main.temp;
-    const icon = chunkedArray[0].weather[0].icon;
+    var chunk = require('chunk');
+    const chunkedForecast = chunk(forecast, forecast.length / 5);
+    console.log(chunkedForecast);
+    // get max temp
+    const getMaxTemp = array =>
+        array.reduce((acc, cur) => (acc.main.temp > cur.main.temp ? acc : cur));
+    // get min temp
+    const getMinTemp = array =>
+        array.reduce((acc, cur) => (acc.main.temp < cur.main.temp ? acc : cur));
 
     return(
         <div>
-            <p>{time}</p>
-            <p>{temp}</p>
-            <p>{icon}</p>
+            <HourlyWeather hourlyforecast={chunkedForecast[0]}/>
+            {chunkedForecast.map((day, i) => (
+                <React.Fragment key={i}>
+                    {i === 0 && <h2>Today:</h2>}
+                    {i === 1 && <h2>Upcoming:</h2>}
+                    <DayWeather
+                    date={day[0].dt_txt}
+                    icon={day[0].weather[0].icon}
+                    maxTemp={getMaxTemp(day).main.temp}
+                    minTemp={getMinTemp(day).main.temp}
+                    list={day}
+                />
+                </React.Fragment>
+            ))}
         </div>
     );
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import WeeklyForecast from '../components/organisms/WeeklyForecast';
 import PageTemplate from '../components/templates/PageTemplate';
 import Button from '../components/atoms/Button';
+import Forecast from '../components/organisms/Forecast';
 
 const WeatherPage = ({city, temp, changeCity, forecast, ...props}) => {
   return (
@@ -13,7 +13,7 @@ const WeatherPage = ({city, temp, changeCity, forecast, ...props}) => {
         changeCity = {changeCity}
         >
 
-        <WeeklyForecast forecast = {forecast}/>
+        <Forecast forecast = {forecast}/>
         
         <Link to="/complain">
           <Button>go complain to weatherman</Button>

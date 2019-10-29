@@ -1,9 +1,9 @@
 import React from 'react';
 
-const TempHigh = () => {
+const TempHigh = ({maxTemp, ...props}) => {
     return (
     <div>
-        <p>30 degrees</p>
+        <p>High is {maxTemp}</p>
     </div>
     );
 };

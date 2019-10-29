@@ -24,11 +24,9 @@ class AppContainer extends Component {
             `${API_URL}/weather?q=${this.state.city}&units=metric&appid=${process.env.REACT_APP_API_KEY}`
         )
         .then(response => {
-            console.log(response);
             return response.json();
         })
         .then(data => {
-            console.log(data);
             this.setState({ temp: data.main.temp });
         })
         .catch(function(err) {
@@ -54,7 +52,6 @@ class AppContainer extends Component {
     }
 
     handleChangeCity() {
-        console.log('ckick');
         this.setState({city: this.getRandomCity(CITIES)}, () => {
             this.fetchApiData();
             this.fetchForecast();
