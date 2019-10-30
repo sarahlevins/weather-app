@@ -1,8 +1,8 @@
 import React from 'react';
-import HourlyWeatherItem from './HourlyWeatherItem';
 
 
-const HourlyWeather = ({icon, hourlyforecast ...props}) => {
+const HourlyWeather = ({icon, hourlyforecast, ...props}) => {
+    console.log(hourlyforecast);    
     return (
     <div>
         <h2>Hourly Weather:</h2>

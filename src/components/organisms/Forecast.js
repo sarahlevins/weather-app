@@ -6,7 +6,6 @@ const Forecast = ({forecast, ...props}) => {
 
     var chunk = require('chunk');
     const chunkedForecast = chunk(forecast, forecast.length / 5);
-    console.log(chunkedForecast);
     // get max temp
     const getMaxTemp = array =>
         array.reduce((acc, cur) => (acc.main.temp > cur.main.temp ? acc : cur));
@@ -16,7 +15,7 @@ const Forecast = ({forecast, ...props}) => {
 
     return(
         <div>
-            <HourlyWeather hourlyforecast={chunkedForecast[0]}/>
+            
             {chunkedForecast.map((day, i) => (
                 <React.Fragment key={i}>
                     {i === 0 && <h2>Today:</h2>}
