@@ -1,5 +1,6 @@
 import React from 'react';
 import DayWeather from'../molecules/DayWeather';
+import PropTypes from 'prop-types';
 
 const Forecast = ({forecast, ...props}) => {
     var chunk = require('chunk');
@@ -29,5 +30,14 @@ const Forecast = ({forecast, ...props}) => {
         </div>
     );
 }
+
+Forecast.propTypes ={
+    forecast: PropTypes.arrayOf(PropTypes.shape({
+        dt_txt: PropTypes.string.isRequired,
+        main: PropTypes.object.isRequired,
+        weather: PropTypes.array.isRequired,
+    })).isRequired 
+};
+
 
 export default Forecast;

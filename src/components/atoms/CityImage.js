@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const CityImage = ({cityimage, ...props}) => {
     return (
@@ -8,6 +9,10 @@ const CityImage = ({cityimage, ...props}) => {
             </p>
         </div>
     );
+};
+
+CityImage.propTypes ={
+    cityimage: PropTypes.string.isRequired
 };
 
 export default CityImage;

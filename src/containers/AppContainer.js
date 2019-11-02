@@ -12,7 +12,7 @@ class AppContainer extends Component {
 
         this.state = {
             city: CITIES[0],
-            temp: '',
+            temp: 0,
             forecast: []
         };
 

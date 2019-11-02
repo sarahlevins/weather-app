@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ChangeCityButton = (button, ...props) => {
     return (
@@ -6,6 +7,10 @@ const ChangeCityButton = (button, ...props) => {
         <button>change city</button>
     </div>
     );
+};
+
+ChangeCityButton.propTypes ={
+    button: PropTypes.elementType.isRequired
 };
 
 export default ChangeCityButton;

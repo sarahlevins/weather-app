@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const WeatherIcon = ({icon, ...props}) => {
     return (
@@ -7,5 +8,10 @@ const WeatherIcon = ({icon, ...props}) => {
     </div>
     );
 };
+
+WeatherIcon.propTypes = {
+    icon: PropTypes.string.isRequired,
+  };
+  
 
 export default WeatherIcon;

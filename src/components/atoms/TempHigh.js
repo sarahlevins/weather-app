@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const TempHigh = ({maxTemp, ...props}) => {
     return (
@@ -6,6 +7,10 @@ const TempHigh = ({maxTemp, ...props}) => {
         <p>High is {maxTemp}</p>
     </div>
     );
+};
+
+TempHigh.propTypes = {
+    maxTemp: PropTypes.number.isRequired
 };
 
 export default TempHigh;
