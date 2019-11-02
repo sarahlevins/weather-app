@@ -1,9 +1,10 @@
 import React from 'react';
+import moment from 'moment';
 
 const DayOfWeek = ({date, ...props}) => {
     return (
     <div>
-        <p>{date}</p>
+        <p>{moment(date).format('dddd')}</p>
     </div>
     );
 };

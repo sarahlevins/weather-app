@@ -12,7 +12,7 @@ const WeatherPage = ({city, temp, changeCity, forecast, ...props}) => {
         temp = {temp}
         changeCity = {changeCity}
         >
-
+          
         <Forecast forecast = {forecast}/>
         
         <Link to="/complain">

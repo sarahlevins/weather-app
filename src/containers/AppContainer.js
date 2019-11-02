@@ -66,7 +66,6 @@ class AppContainer extends Component {
     render () {
         return(
             <>
-            
             <Route path ="/"
             component={() =>{
                 return(

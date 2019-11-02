@@ -1,9 +1,7 @@
 import React from 'react';
 import DayWeather from'../molecules/DayWeather';
-import HourlyWeather from '../molecules/HourlyWeather';
 
 const Forecast = ({forecast, ...props}) => {
-
     var chunk = require('chunk');
     const chunkedForecast = chunk(forecast, forecast.length / 5);
     // get max temp
@@ -15,7 +13,6 @@ const Forecast = ({forecast, ...props}) => {
 
     return(
         <div>
-            
             {chunkedForecast.map((day, i) => (
                 <React.Fragment key={i}>
                     {i === 0 && <h2>Today:</h2>}
