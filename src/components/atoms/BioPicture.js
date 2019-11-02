@@ -9,8 +9,8 @@ const BioPicture = () => {
     );
 };
 
-BioPicture.propTypes ={
-    image: PropTypes.string.isRequired
-};
+// BioPicture.propTypes ={
+//     image: PropTypes.string.isRequired
+// };
 
 export default BioPicture;
