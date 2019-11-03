@@ -1,14 +1,13 @@
 import React from 'react';
-import TempCurrent from '../atoms/TempCurrent';
-import WeatherIcon from '../atoms/WeatherIcon';
+import moment from 'moment';
 
-const HourlyWeatherItem = ({icon, hour, ...props}) => {
-    return (
-    <div>
-        <TempCurrent />
-        <WeatherIcon icon={icon} />
-    </div>
-    );
+const HourlyWeatherItem = ({time, temp, ...props}) => {
+    return(
+        <li>
+            <div>{moment(time).format('LT')}</div>
+            <div>{temp}</div>
+        </li>
+    )
 };
 
 export default HourlyWeatherItem;

@@ -2,15 +2,15 @@ import React from 'react';
 import CityName from '../atoms/CityName';
 import CityImage from '../atoms/CityImage';
 import TempCurrent from '../atoms/TempCurrent';
-import ChangeCityButton from '../atoms/ChangeCityButton';
+import TextLink from '../atoms/TextLink';
+import './CurrentWeather.css';
 
 const CurrentWeather = ({city, cityimage, temp, changeCityLink, ...props}) => {
     return (
-    <div>
-        <CityImage cityimage={cityimage}/>
+    <div className="CurrentWeather" style={{ backgroundImage: `${cityimage}` }}>
         <CityName city={city} />
+        <TextLink onButtonClick={changeCityLink}>Change</TextLink>
         <TempCurrent temp={temp} />
-        <button onClick={changeCityLink}>Change City</button>
     </div>
     );
 };

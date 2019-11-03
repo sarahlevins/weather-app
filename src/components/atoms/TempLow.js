@@ -1,11 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import './TempLow.css'
 
-const TempLow = () => {
+const TempLow = ({minTemp, ...props}) => {
     return (
-    <div>
-        <p>20 degrees</p>
-    </div>
+    <>
+        <label className="TempLow">{minTemp}°</label>
+    </>
     );
+};
+
+TempLow.propTypes = {
+    minTemp: PropTypes.number.isRequired
 };
 
 export default TempLow;

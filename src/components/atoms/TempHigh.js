@@ -1,11 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import './TempHigh.css'
 
-const TempHigh = () => {
+const TempHigh = ({maxTemp, ...props}) => {
     return (
-    <div>
-        <p>30 degrees</p>
-    </div>
+    <>
+        <label className="TempHigh">{maxTemp}°</label>
+    </>
     );
+};
+
+TempHigh.propTypes = {
+    maxTemp: PropTypes.number.isRequired
 };
 
 export default TempHigh;

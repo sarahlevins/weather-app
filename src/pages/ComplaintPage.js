@@ -14,8 +14,14 @@ const ComplaintPage = ({city, temp, changeCity, ...props}) => {
       changeCity = {changeCity}
     >
     
-      <Bio />
+      <Bio 
+      header='Sarah Levins'
+      image='bio image goes here'
+      description='she tells us the weather'
+      />
+
       <ComplaintForm />
+      
       <Link to="/">
           <Button>Go to weather</Button>
       </Link>

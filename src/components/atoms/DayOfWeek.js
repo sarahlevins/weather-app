@@ -1,14 +1,18 @@
 import React from 'react';
+import moment from 'moment';
+import PropTypes from 'prop-types';
+import './DayOfWeek.css';
 
-class DayOfWeek extends React.Component {
-    render(){
-        const weekday = this.props.weekday
-        return (
-        <div>
-            <p>{weekday}</p>
-        </div>
-        )
-    }
+const DayOfWeek = ({date, ...props}) => {
+    return (
+    <>
+        <label className="DayOfWeek">{moment(date).format('dddd')}</label>
+    </>
+    );
+};
+
+DayOfWeek.propTypes ={
+    date: PropTypes.string.isRequired
 };
 
 export default DayOfWeek;

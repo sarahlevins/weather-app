@@ -1,11 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const BioDescription = () => {
+const BioDescription = ({description, ...props}) => {
+
     return (
     <div>
-        <p>This is a description of the weatherman</p>
+        {description}
     </div>
     );
+};
+
+BioDescription.propTypes ={
+    description: PropTypes.string.isRequired
 };
 
 export default BioDescription;

@@ -1,9 +1,15 @@
-import React from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import './Button.css'; // Tell Webpack that Button.js uses these styles
 
-const Button = ({ onClick, ...props }) => {
-  return (
-  <button onClick={onClick}>{props.children}</button>
-  );
-};
+class Button extends Component {
+  render() {
+    return (
+    <div className="Button">  
+      <button></button>
+    </div>
+    )
+  }
+}
 
 export default Button;

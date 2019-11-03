@@ -1,19 +1,22 @@
 import React from 'react';
 import HourlyWeatherItem from './HourlyWeatherItem';
+import './HourlyWeather.css';
 
 
-const HourlyWeather = ({icon, ...props}) => {
+const HourlyWeather = ({ list, ...props }) => {
     return (
-    <div>
-        <h2>Hourly Weather</h2>
-        <HourlyWeatherItem icon={icon} />
-        <HourlyWeatherItem icon={icon} />
-        <HourlyWeatherItem icon={icon} />
-        <HourlyWeatherItem icon={icon} />
-        <HourlyWeatherItem icon={icon} />
-        <HourlyWeatherItem icon={icon} />
-    </div>
+        <div className="HourlyWeather">
+          <ul className="HourlyWeatherList">
+          {list.map(item => (
+            <HourlyWeatherItem
+              key={item.dt}
+              time={item.dt_txt}
+              temp={parseInt(item.main.temp)}
+            />
+          ))}
+          </ul>
+        </div>
     );
-};
+  };
 
 export default HourlyWeather;
