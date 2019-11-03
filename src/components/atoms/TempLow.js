@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './TempLow.css'
 
 const TempLow = ({minTemp, ...props}) => {
     return (
-    <div>
-        <p>Low is {minTemp}</p>
-    </div>
+    <>
+        <label className="TempLow">{minTemp}°</label>
+    </>
     );
 };
 

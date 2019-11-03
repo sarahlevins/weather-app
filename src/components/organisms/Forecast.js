@@ -16,13 +16,13 @@ const Forecast = ({forecast, ...props}) => {
         <div>
             {chunkedForecast.map((day, i) => (
                 <React.Fragment key={i}>
-                    {i === 0 && <h2>Today:</h2>}
-                    {i === 1 && <h2>Upcoming:</h2>}
+                    {i === 0 && <label>Today:</label>}
+                    {i === 1 && <label>Upcoming:</label>}
                     <DayWeather
                     date={day[0].dt_txt}
-                    icon={day[0].weather[0].icon}
-                    maxTemp={getMaxTemp(day).main.temp}
-                    minTemp={getMinTemp(day).main.temp}
+                    icon={`http://openweathermap.org/img/wn/${day[0].weather[0].icon}.png`}
+                    maxTemp={parseInt(getMaxTemp(day).main.temp)}
+                    minTemp={parseInt(getMinTemp(day).main.temp)}
                     list={day}
                 />
                 </React.Fragment>

@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './CityName.css'
 
 const CityName = ({city, ...props}) => {
     return (
-    <div>
-        <p>{city}</p>
+    <div className="CityName">
+        {city}
     </div>
     );
 };

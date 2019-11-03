@@ -1,12 +1,13 @@
 import React from 'react';
 import moment from 'moment';
 import PropTypes from 'prop-types';
+import './DayOfWeek.css';
 
 const DayOfWeek = ({date, ...props}) => {
     return (
-    <div>
-        <p>{moment(date).format('dddd')}</p>
-    </div>
+    <>
+        <label className="DayOfWeek">{moment(date).format('dddd')}</label>
+    </>
     );
 };
 

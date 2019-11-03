@@ -1,12 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import "./CityImage.css";
 
 const CityImage = ({cityimage, ...props}) => {
     return (
-        <div>
-            <p>
-            {cityimage}
-            </p>
+        <div className="CityImage"> 
         </div>
     );
 };

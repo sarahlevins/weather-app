@@ -6,15 +6,16 @@ import TempLow from '../atoms/TempLow';
 import HourlyWeather from './HourlyWeather';
 
 const DayWeather = ({key, date, icon, maxTemp, minTemp, list, ...props}) => {
-    console.log('day', list);
     return (
-        <div>
-        <DayOfWeek date={date} />
-        <WeatherIcon icon={icon} />
-        <TempHigh maxTemp={maxTemp} />
-        <TempLow minTemp={minTemp} />
-        <HourlyWeather list={list} />
+        <>
+        <div className="DayWeatherContainer">
+            <DayOfWeek date={date} />
+            <WeatherIcon icon={icon} />
+            <TempHigh maxTemp={maxTemp} />
+            <TempLow minTemp={minTemp} />
         </div>
+        <HourlyWeather list={list} />
+        </>
     )
 }
 

@@ -3,7 +3,7 @@ import CurrentWeather from '../molecules/CurrentWeather';
 
 const PageTemplate = ({city, cityimage, temp, changeCity, ...props}) => {
   return (
-    <div>
+    <div className="PageTemplate">
       <CurrentWeather 
       city = {city}
       cityimage = {cityimage} 

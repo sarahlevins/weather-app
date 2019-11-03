@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './TempCurrent.css';
 
 const TempCurrent = ({temp, ...props}) => {
-    console.log(typeof temp, temp);
     return (
-    <div>
-        <p>{temp}</p>
+    <div className="TempCurrent">
+        {temp}°
     </div>
     );
 };

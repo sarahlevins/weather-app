@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './TempHigh.css'
 
 const TempHigh = ({maxTemp, ...props}) => {
     return (
-    <div>
-        <p>High is {maxTemp}</p>
-    </div>
+    <>
+        <label className="TempHigh">{maxTemp}°</label>
+    </>
     );
 };
 

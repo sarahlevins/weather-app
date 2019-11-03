@@ -27,7 +27,7 @@ class AppContainer extends Component {
             return response.json();
         })
         .then(data => {
-            this.setState({ temp: data.main.temp });
+            this.setState({ temp: parseInt(data.main.temp) });
         })
         .catch(function(err) {
             console.error(err);
