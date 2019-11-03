@@ -8,7 +8,7 @@ const WeatherPage = ({city, temp, changeCity, forecast, ...props}) => {
   return (
       <PageTemplate 
         city = {city}
-        cityimage = "https://media.tacdn.com/media/attractions-splice-spp-360x240/06/74/aa/fc.jpg"
+        cityimage = {`./media/${city}.jpg` }
         temp = {temp}
         changeCity = {changeCity}
         >
