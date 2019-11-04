@@ -20,7 +20,7 @@ const Forecast = ({forecast, ...props}) => {
                     {i === 1 && <label>Upcoming:</label>}
                     <DayWeather
                     date={day[0].dt_txt}
-                    icon={`http://openweathermap.org/img/wn/${day[0].weather[0].icon}.png`}
+                    icon={day[0].weather[0].icon}
                     maxTemp={parseInt(getMaxTemp(day).main.temp)}
                     minTemp={parseInt(getMinTemp(day).main.temp)}
                     list={day}
