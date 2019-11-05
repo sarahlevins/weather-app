@@ -11,7 +11,6 @@ const Forecast = ({forecast, ...props}) => {
     // get min temp
     const getMinTemp = array =>
         array.reduce((acc, cur) => (acc.main.temp < cur.main.temp ? acc : cur));
-
     return(
         <div>
             {chunkedForecast.map((day, i) => (
