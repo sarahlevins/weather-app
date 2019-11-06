@@ -1,0 +1,22 @@
+.day-weather-container {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.weather-day-of-week {
+    margin-left: 20px;
+    margin-right: 33px;
+    width: 180px;
+    height: 41px;
+}
+
+.weather-icon {
+    width: 30px;
+    height: 30px;
+    padding-right: 4px;
+}
+
+.weather-detail {
+    width: 46px;
+    height: 30px
+}

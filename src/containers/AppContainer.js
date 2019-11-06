@@ -3,7 +3,7 @@ import ComplaintPage from '../pages/ComplaintPage';
 import WeatherPage from '../pages/WeatherPage';
 import { Route } from 'react-router-dom';
 
-const CITIES = ['London', 'Paris', 'Rome', 'Stockholm', 'Sydney', 'Tokyo', 'New York', 'Boston'];
+const CITIES = ['London', 'Paris', 'Rome', 'Milan', 'Venice']
 const API_URL = 'http://api.openweathermap.org/data/2.5';
 
 class AppContainer extends Component {

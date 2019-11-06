@@ -1,6 +1,7 @@
 import React from 'react';
 import DayWeather from'../molecules/DayWeather';
 import PropTypes from 'prop-types';
+import './Forecast.css';
 
 const Forecast = ({forecast, ...props}) => {
     var chunk = require('chunk');
@@ -11,16 +12,16 @@ const Forecast = ({forecast, ...props}) => {
     // get min temp
     const getMinTemp = array =>
         array.reduce((acc, cur) => (acc.main.temp < cur.main.temp ? acc : cur));
-
     return(
         <div>
             {chunkedForecast.map((day, i) => (
                 <React.Fragment key={i}>
-                    {i === 0 && <label>Today:</label>}
-                    {i === 1 && <label>Upcoming:</label>}
+                    {i === 0 && <label className="label-alignment">Today:</label>}
+                    {i === 1 && <label className="label-alignment">Upcoming:</label>}
                     <DayWeather
                     date={day[0].dt_txt}
-                    icon={`http://openweathermap.org/img/wn/${day[0].weather[0].icon}.png`}
+                    index={i}
+                    icon={day[0].weather[0].icon}
                     maxTemp={parseInt(getMaxTemp(day).main.temp)}
                     minTemp={parseInt(getMinTemp(day).main.temp)}
                     list={day}
