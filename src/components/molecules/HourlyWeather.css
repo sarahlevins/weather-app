@@ -1,17 +1,19 @@
 .HourlyWeather {
-    display: flex;
-    flex-flow: row || nowrap;
-}
+    width: 100%;
+    justify-content: space-evenly;
 
-.HourlyWeatherList {
+}
+.HourlyWeatherList { 
     display: flex;
+    flex-basis: 100px;
     padding-inline-start: 5px;
     padding-inline-end: 5px;
     margin-block-start: 5px;
     margin-block-end: 5px;
     background-color: #381677;
+    justify-content: space-evenly;
 }
 
 .HourlyWeatherList li {
-    display: inline;
+    display: inline-block;
 }

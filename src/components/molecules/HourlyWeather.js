@@ -10,6 +10,7 @@ const HourlyWeather = ({ list, ...props }) => {
           {list.map(item => (
             <HourlyWeatherItem
               key={item.dt}
+              icon={item.weather[0].icon}
               time={item.dt_txt}
               temp={parseInt(item.main.temp)}
             />

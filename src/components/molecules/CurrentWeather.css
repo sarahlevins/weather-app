@@ -1,4 +1,31 @@
-.CurrentWeather {
+.current-weather-container {
     width: 375px;
+    height: 245px;
     text-align: center;
 }
+
+.city-name-container {
+    position: absolute;
+    width: 152px;
+    height: 50px;
+    margin-top: 29px;
+    margin-left: 112px;
+}
+
+.change-link-container {
+    position: absolute;
+    width: 69px;
+    height: 17px;
+    margin-top: 76px;
+    margin-left: 153px;
+}
+
+.temp-current-container {
+    position: absolute;
+    width: 152px;
+    height: 100px;
+    margin-top: 92px;
+    margin-left: 112px;
+}
+
+
