@@ -11,14 +11,17 @@ class DayWeather extends React.Component {
     super(props);
 
     this.state = {
-      showHourlyWeather: false
+      showHourlyWeather: false,
+      isOpen: false
     };
 
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
-    this.setState(state => ({ showHourlyWeather: !state.showHourlyWeather }));
+    this.setState(state => ({
+      showHourlyWeather: !state.showHourlyWeather
+    }));
   }
 
   render() {

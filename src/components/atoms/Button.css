@@ -1,3 +1,17 @@
 .Button {
-    padding: 20px;
-  }
+  padding: 20px;
+}
+
+.Button-Submit {
+  width: 148px;
+  height: 25px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 400;
+  border: 0px;
+  border-radius: 5px;
+  background-color: #ed61ab;
+  margin-left: 200px;
+  margin-top: 28px;
+  text-decoration: none;
+}

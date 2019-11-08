@@ -1,16 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-const BioPicture = ({image, ...props}) => {
-    return (
+const BioPicture = ({ image, imagealt, ...props }) => {
+  return (
     <div>
-        {image}
+      <img src={image} alt={imagealt} />
     </div>
-    );
+  );
 };
 
-BioPicture.propTypes ={
-    image: PropTypes.string.isRequired
+BioPicture.propTypes = {
+  image: PropTypes.string.isRequired
 };
 
 export default BioPicture;
