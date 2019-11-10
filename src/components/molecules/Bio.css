@@ -1,0 +1,38 @@
+.bio-container {
+  display: grid;
+  grid-template-columns: 110px auto 193px;
+  grid-template-rows: 34px 66px;
+  grid-template-areas:
+    "picture . header"
+    "picture . description";
+  margin: 10px 28px 0px 28px;
+  row-gap: 10px;
+}
+
+.bio-picture {
+  grid-area: picture;
+}
+.bio-header {
+  font-size: 25px;
+  font-weight: lighter;
+  grid-area: header;
+}
+
+.bio-description {
+  font-size: 10px;
+  font-weight: lighter;
+  grid-area: description;
+}
+
+.bio-picture-container {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 5px solid #eb64aa;
+}
+
+.bio-picture {
+  margin: 0 auto;
+  width: 100%;
+}

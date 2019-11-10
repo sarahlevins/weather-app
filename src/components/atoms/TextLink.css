@@ -1,6 +1,10 @@
-button {
-    color: #fff;
-    text-decoration: underline;
-    font-size: 10pt;
-    font-weight: 300;
+.TextLink {
+  text-decoration: underline;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 300;
+}
+
+.TextLink:hover {
+  color: grey;
 }

@@ -1,9 +1,11 @@
-.weather-icon{
-    color: purple;
-    width: 30px;
-    height: 30px;
+.weather-icon {
+  color: purple;
+  width: 30px;
+  height: 30px;
 }
 
-.hour-icon{
-    
-}
+/* .hourly-weather-icon {
+  font-size: 10px;
+  line-height: 20%;
+  color: #ed61ab;
+} */
