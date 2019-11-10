@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import DayWeather from "../molecules/DayWeather";
 import PropTypes from "prop-types";
 import "./Forecast.css";
@@ -12,6 +12,10 @@ const Forecast = ({ forecast, ...props }) => {
   // get min temp
   const getMinTemp = array =>
     array.reduce((acc, cur) => (acc.main.temp < cur.main.temp ? acc : cur));
+
+  //set state for hourly weather accordian
+  const [showHourly, setShowHourly] = useState(0);
+
   return (
     <div>
       {chunkedForecast.map((day, i) => (
@@ -25,6 +29,8 @@ const Forecast = ({ forecast, ...props }) => {
             maxTemp={parseInt(getMaxTemp(day).main.temp)}
             minTemp={parseInt(getMinTemp(day).main.temp)}
             list={day}
+            onDailyClick={() => setShowHourly(i)}
+            showHourly={showHourly === i}
           />
         </React.Fragment>
       ))}
