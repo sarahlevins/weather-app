@@ -39,7 +39,7 @@ const CurrentWeather = ({
       <div className="temp-current-container">
         <TempCurrent temp={temp} />
       </div>
-      <div class="toggle-divider"></div>
+      <div className="toggle-divider"></div>
       {/* <div class="toggle-panel"></div> */}
     </div>
   );
