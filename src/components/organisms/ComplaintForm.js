@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Button from "../atoms/Button";
 import FormField from "../molecules/FormField";
+import "./ComplaintForm.css";
 
 class ComplaintForm extends Component {
   constructor(props) {
@@ -71,32 +72,34 @@ class ComplaintForm extends Component {
 
   render() {
     const form = (
-      <form onSubmit={this.handleSubmit}>
-        <FormField
-          type="text"
-          name="name"
-          label="Name"
-          value={this.state.name}
-          onChange={this.handleChange}
-        />
-        <FormField
-          type="text"
-          name="email"
-          label="Email"
-          value={this.state.email}
-          onChange={this.handleChange}
-        />
-        <FormField
-          type="textarea"
-          name="complaint"
-          label="Complaint"
-          value={this.state.complaint}
-          onChange={this.handleChange}
-        />
-        <Button className="Button-Submit" type="submit">
-          Complain
-        </Button>
-      </form>
+      <div className="complaint-form-container">
+        <form onSubmit={this.handleSubmit}>
+          <FormField
+            type="text"
+            name="name"
+            label="Name"
+            value={this.state.name}
+            onChange={this.handleChange}
+          />
+          <FormField
+            type="text"
+            name="email"
+            label="Email"
+            value={this.state.email}
+            onChange={this.handleChange}
+          />
+          <FormField
+            type="textarea"
+            name="complaint"
+            label="Complaint"
+            value={this.state.complaint}
+            onChange={this.handleChange}
+          />
+          <Button className="Button-Submit" type="submit">
+            Complain
+          </Button>
+        </form>
+      </div>
     );
 
     const successMessage = <p>Your complaint has been submitted</p>;

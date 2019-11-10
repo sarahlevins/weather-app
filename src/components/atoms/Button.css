@@ -1,7 +1,6 @@
 .Button {
   padding: 20px;
 }
-
 .Button-Submit {
   width: 148px;
   height: 25px;
@@ -11,7 +10,7 @@
   border: 0px;
   border-radius: 5px;
   background-color: #ed61ab;
-  margin-left: 200px;
   margin-top: 28px;
+  margin-left: 170px;
   text-decoration: none;
 }
