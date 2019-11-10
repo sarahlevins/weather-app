@@ -17,7 +17,7 @@ const Forecast = ({ forecast, ...props }) => {
   const [showHourly, setShowHourly] = useState(0);
 
   return (
-    <div>
+    <div className="forecast">
       {chunkedForecast.map((day, i) => (
         <React.Fragment key={i}>
           {i === 0 && <label className="label-alignment">Today:</label>}

@@ -5,9 +5,9 @@ import "./TextLink.css";
 const TextLink = ({ onButtonClick, ...props }) => {
   return (
     <>
-      <a href onClick={onButtonClick} className="TextLink">
+      <div onClick={onButtonClick} className="TextLink">
         {props.children}
-      </a>
+      </div>
     </>
   );
 };

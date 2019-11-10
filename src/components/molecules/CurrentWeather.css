@@ -1,31 +1,51 @@
 .current-weather-container {
-    width: 375px;
-    height: 245px;
-    text-align: center;
+  width: 375px;
+  height: 245px;
+  text-align: center;
+}
+
+.current-weather-container::before {
+  opacity: 0.4;
 }
 
 .city-name-container {
-    position: absolute;
-    width: 152px;
-    height: 50px;
-    margin-top: 29px;
-    margin-left: 112px;
+  position: absolute;
+  width: 152px;
+  height: 50px;
+  margin-top: 29px;
+  margin-left: 112px;
 }
 
 .change-link-container {
-    position: absolute;
-    width: 69px;
-    height: 17px;
-    margin-top: 76px;
-    margin-left: 153px;
+  position: absolute;
+  width: 69px;
+  height: 17px;
+  margin-top: 76px;
+  margin-left: 153px;
 }
 
 .temp-current-container {
-    position: absolute;
-    width: 152px;
-    height: 100px;
-    margin-top: 92px;
-    margin-left: 112px;
+  position: absolute;
+  width: 152px;
+  height: 100px;
+  margin-top: 92px;
+  margin-left: 112px;
 }
 
+.toggle-divider {
+  height: 15px;
+  width: 375px;
+  background-image: linear-gradient(to right, #f5ba7a, #ed5dae, #ed5caf);
+  position: absolute;
+  margin-top: 245px;
+}
 
+.toggle-panel {
+  width: 99px;
+  height: 36px;
+  background-color: white;
+  border-radius: 15px;
+  position: absolute;
+  margin-top: 233px;
+  margin-left: 138px;
+}
