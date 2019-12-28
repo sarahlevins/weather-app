@@ -1,5 +1,4 @@
 .complaint-form-container {
   margin: 29px 0px 0px 28px;
-  display: grid;
-  grid-template-rows: ;
+  display: block;
 }

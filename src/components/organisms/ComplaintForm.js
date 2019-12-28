@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Button from "../atoms/Button";
 import FormField from "../molecules/FormField";
+import TextLink from "../atoms/TextLink";
 import "./ComplaintForm.css";
 
 class ComplaintForm extends Component {
@@ -108,9 +109,13 @@ class ComplaintForm extends Component {
     );
 
     const dialogue = (
-      <div>
+      <div
+        style={{
+          textAlign: "center"
+        }}
+      >
         {this.state.submitSuccess === true ? successMessage : failureMessage}
-        <button onClick={() => this.handleDialogue()}>Continue</button>
+        <TextLink onClick={() => this.handleDialogue()}>Continue</TextLink>
       </div>
     );
 

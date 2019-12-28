@@ -4,7 +4,7 @@ import WeatherPage from "../pages/WeatherPage";
 import { Route } from "react-router-dom";
 
 const CITIES = ["London", "Paris", "Rome", "Milan", "Venice"];
-const API_URL = "http://api.openweathermap.org/data/2.5";
+const API_URL = "https://api.openweathermap.org/data/2.5";
 
 class AppContainer extends Component {
   constructor(props) {
